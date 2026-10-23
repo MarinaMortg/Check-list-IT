@@ -6,14 +6,14 @@ import streamlit as st
 # --------------------------------------------------
 
 st.set_page_config(
-    page_title="English Assessment",
+    page_title="General English Checklist",
     page_icon="💬",
     layout="wide"
 )
 
 
 # --------------------------------------------------
-# COMPACT STYLING
+# Styling #
 # --------------------------------------------------
 
 st.markdown(
