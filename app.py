@@ -214,7 +214,7 @@ with right_column:
 # --------------------------------------------------
 
 understanding_scores = {
-     "Not Demonstrated": 0 
+     "Not Demonstrated": 0,
     "Understands simple questions with support": 1,
     "Understands clear, familiar workplace questions": 2,
     "Understands normal workplace communication and follow-ups": 3,
