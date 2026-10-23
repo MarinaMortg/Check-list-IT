@@ -74,51 +74,57 @@ st.title("General English Checklist")
 # --------------------------------------------------
 
 understanding_options = [
+    "Not Demonstrated"
     "Understands simple questions with support",
     "Understands clear, familiar workplace questions",
     "Understands normal workplace communication and follow-ups",
     "Understands detailed and complex workplace communication",
-    "Not Demonstrated"
+   
 ]
 
 functional_communication_options = [
+    "Not Demonstrated"
     "Communicates a few basic points",
     "Communicates the main message with some support",
     "Communicates all key points independently",
     "Communicates effectively and adapts to changes",
-    "Not Demonstrated"
+    
 ]
 
 interaction_clarification_options = [
+    "Not Demonstrated"
     "Responds to simple questions using basic phrases",
     "Maintains a short exchange and asks for clarification",
     "Asks follow-up questions and resolves misunderstandings",
     "Clarifies ambiguity and develops the exchange effectively",
-    "Not Demonstrated"
+    
 ]
 
 grammar_and_structure_options = [
+    "Not Demonstrated"
     "Uses basic sentence patterns with frequent errors",
     "Uses simple structures; the main message is clear",
     "Uses varied structures with reasonable control",
     "Uses complex structures clearly and accurately",
-    "Not Demonstrated"
+    
 ]
 
 vocabulary_options = [
+    "Not Demonstrated"
     "Uses a limited range of familiar words",
     "Uses familiar vocabulary for routine tasks",
     "Uses sufficient workplace vocabulary and can paraphrase",
     "Uses broad, precise vocabulary and adapts terminology",
-    "Not Demonstrated"
+   
 ]
 
 pronunciation_and_fluency_options = [
+    "Not Demonstrated"
     "Uses familiar phrases with frequent pauses",
     "Produces short, generally understandable speech",
     "Speaks clearly at a workable pace",
     "Speaks fluently and reformulates smoothly",
-    "Not Demonstrated"
+    
 ]
 
 
@@ -208,51 +214,57 @@ with right_column:
 # --------------------------------------------------
 
 understanding_scores = {
+     "Not Demonstrated": 0 
     "Understands simple questions with support": 1,
     "Understands clear, familiar workplace questions": 2,
     "Understands normal workplace communication and follow-ups": 3,
     "Understands detailed and complex workplace communication": 4,
-    "Not Demonstrated": 0
+  
 }
 
 functional_communication_scores = {
+     "Not Demonstrated": 0
     "Communicates a few basic points": 1,
     "Communicates the main message with some support": 2,
     "Communicates all key points independently": 3,
     "Communicates effectively and adapts to changes": 4,
-    "Not Demonstrated": 0
+    
 }
 
 interaction_clarification_scores = {
+    "Not Demonstrated": 0
     "Responds to simple questions using basic phrases": 1,
     "Maintains a short exchange and asks for clarification": 2,
     "Asks follow-up questions and resolves misunderstandings": 3,
     "Clarifies ambiguity and develops the exchange effectively": 4,
-    "Not Demonstrated": 0
+    
 }
 
 grammar_and_structure_scores = {
+    "Not Demonstrated": 0
     "Uses basic sentence patterns with frequent errors": 1,
     "Uses simple structures; the main message is clear": 2,
     "Uses varied structures with reasonable control": 3,
     "Uses complex structures clearly and accurately": 4,
-    "Not Demonstrated": 0
+    
 }
 
 vocabulary_scores = {
+     "Not Demonstrated": 0
     "Uses a limited range of familiar words": 1,
     "Uses familiar vocabulary for routine tasks": 2,
     "Uses sufficient workplace vocabulary and can paraphrase": 3,
     "Uses broad, precise vocabulary and adapts terminology": 4,
-    "Not Demonstrated": 0
+    
 }
 
 pronunciation_and_fluency_scores = {
+    "Not Demonstrated": 0
     "Uses familiar phrases with frequent pauses": 1,
     "Produces short, generally understandable speech": 2,
     "Speaks clearly at a workable pace": 3,
     "Speaks fluently and reformulates smoothly": 4,
-    "Not Demonstrated": 0
+    
 }
 
 
