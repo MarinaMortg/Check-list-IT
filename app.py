@@ -223,7 +223,7 @@ understanding_scores = {
 }
 
 functional_communication_scores = {
-     "Not Demonstrated": 0
+     "Not Demonstrated": 0,
     "Communicates a few basic points": 1,
     "Communicates the main message with some support": 2,
     "Communicates all key points independently": 3,
@@ -232,7 +232,7 @@ functional_communication_scores = {
 }
 
 interaction_clarification_scores = {
-    "Not Demonstrated": 0
+    "Not Demonstrated": 0,
     "Responds to simple questions using basic phrases": 1,
     "Maintains a short exchange and asks for clarification": 2,
     "Asks follow-up questions and resolves misunderstandings": 3,
@@ -241,7 +241,7 @@ interaction_clarification_scores = {
 }
 
 grammar_and_structure_scores = {
-    "Not Demonstrated": 0
+    "Not Demonstrated": 0,
     "Uses basic sentence patterns with frequent errors": 1,
     "Uses simple structures; the main message is clear": 2,
     "Uses varied structures with reasonable control": 3,
@@ -250,7 +250,7 @@ grammar_and_structure_scores = {
 }
 
 vocabulary_scores = {
-     "Not Demonstrated": 0
+     "Not Demonstrated": 0,
     "Uses a limited range of familiar words": 1,
     "Uses familiar vocabulary for routine tasks": 2,
     "Uses sufficient workplace vocabulary and can paraphrase": 3,
@@ -259,7 +259,7 @@ vocabulary_scores = {
 }
 
 pronunciation_and_fluency_scores = {
-    "Not Demonstrated": 0
+    "Not Demonstrated": 0,
     "Uses familiar phrases with frequent pauses": 1,
     "Produces short, generally understandable speech": 2,
     "Speaks clearly at a workable pace": 3,
