@@ -1,64 +1,308 @@
 import streamlit as st
- 
-st.title("*IT English Level Check*")
- 
- 
-#Answers#
-st.subheader("1.Understanding")
-understanding_answer = st.radio(
-    "", 
-    ["Понимает, о чем текст в целом", "Понимает частично/с подсказками", "Не понимает"],
-index=1
+
+
+# --------------------------------------------------
+# PAGE SETTINGS
+# --------------------------------------------------
+
+st.set_page_config(
+    page_title="English Assessment",
+    page_icon="💬",
+    layout="wide"
 )
- 
-st.subheader("2.Details")
-details_answer = st.radio(
-    "",
-    ["Верно отвечает на вопросы по тексту", "Отвечает неточно", "Не может ответить"],
-    index=1
+
+
+# --------------------------------------------------
+# COMPACT STYLING
+# --------------------------------------------------
+
+st.markdown(
+    """
+    <style>
+        /* Уменьшаем верхние и нижние отступы страницы */
+        .block-container {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            max-width: 1500px;
+        }
+
+        /* Компактный главный заголовок */
+        h1 {
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+            font-size: 2rem;
+        }
+
+        /* Компактные заголовки параметров */
+        h3 {
+            margin-top: 0.2rem;
+            margin-bottom: 0.1rem;
+            font-size: 1.15rem;
+        }
+
+        /* Уменьшаем расстояние между вариантами radio */
+        div[role="radiogroup"] {
+            gap: 0.15rem;
+        }
+
+        /* Уменьшаем вертикальные отступы внутри элементов */
+        div[data-testid="stRadio"] {
+            margin-bottom: 0.35rem;
+        }
+
+        div[data-testid="stRadio"] label {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        /* Компактный разделитель */
+        hr {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
-st.subheader("Confidence")
-confidence_answer = st.radio(
-    "",
-    ["Читает отлично или с небольшими ошибками", "Читает с ошибками", "Сильно теряется"],
-    index=1
-)
- 
-#Scores#
-Understanding_Scores = {
-    "Понимает, о чем текст в целом": 2,
-    "Понимает частично/с подсказками": 1,
-    "Не понимает": 0,
+
+
+st.title("English Language Assessment")
+
+
+# --------------------------------------------------
+# ANSWER OPTIONS
+# --------------------------------------------------
+
+understanding_options = [
+    "Understands simple questions with support",
+    "Understands clear, familiar workplace questions",
+    "Understands normal workplace communication and follow-ups",
+    "Understands detailed and complex workplace communication",
+    "Not Demonstrated"
+]
+
+functional_communication_options = [
+    "Communicates a few basic points",
+    "Communicates the main message with some support",
+    "Communicates all key points independently",
+    "Communicates effectively and adapts to changes",
+    "Not Demonstrated"
+]
+
+interaction_clarification_options = [
+    "Responds to simple questions using basic phrases",
+    "Maintains a short exchange and asks for clarification",
+    "Asks follow-up questions and resolves misunderstandings",
+    "Clarifies ambiguity and develops the exchange effectively",
+    "Not Demonstrated"
+]
+
+grammar_and_structure_options = [
+    "Uses basic sentence patterns with frequent errors",
+    "Uses simple structures; the main message is clear",
+    "Uses varied structures with reasonable control",
+    "Uses complex structures clearly and accurately",
+    "Not Demonstrated"
+]
+
+vocabulary_options = [
+    "Uses a limited range of familiar words",
+    "Uses familiar vocabulary for routine tasks",
+    "Uses sufficient workplace vocabulary and can paraphrase",
+    "Uses broad, precise vocabulary and adapts terminology",
+    "Not Demonstrated"
+]
+
+pronunciation_and_fluency_options = [
+    "Uses familiar phrases with frequent pauses",
+    "Produces short, generally understandable speech",
+    "Speaks clearly at a workable pace",
+    "Speaks fluently and reformulates smoothly",
+    "Not Demonstrated"
+]
+
+
+# --------------------------------------------------
+# TWO COLUMNS
+# --------------------------------------------------
+
+left_column, right_column = st.columns(2, gap="large")
+
+
+# --------------------------------------------------
+# LEFT COLUMN
+# --------------------------------------------------
+
+with left_column:
+
+    st.subheader("Understanding")
+
+    understanding_answer = st.radio(
+        "Understanding",
+        understanding_options,
+        index=1,
+        key="understanding",
+        label_visibility="collapsed"
+    )
+
+    st.subheader("Functional Communication")
+
+    functional_communication_answer = st.radio(
+        "Functional Communication",
+        functional_communication_options,
+        index=1,
+        key="functional_communication",
+        label_visibility="collapsed"
+    )
+
+    st.subheader("Interaction and Clarification")
+
+    interaction_clarification_answer = st.radio(
+        "Interaction and Clarification",
+        interaction_clarification_options,
+        index=1,
+        key="interaction_clarification",
+        label_visibility="collapsed"
+    )
+
+
+# --------------------------------------------------
+# RIGHT COLUMN
+# --------------------------------------------------
+
+with right_column:
+
+    st.subheader("Grammar and Structure")
+
+    grammar_and_structure_answer = st.radio(
+        "Grammar and Structure",
+        grammar_and_structure_options,
+        index=1,
+        key="grammar_and_structure",
+        label_visibility="collapsed"
+    )
+
+    st.subheader("Vocabulary")
+
+    vocabulary_answer = st.radio(
+        "Vocabulary",
+        vocabulary_options,
+        index=1,
+        key="vocabulary",
+        label_visibility="collapsed"
+    )
+
+    st.subheader("Pronunciation and Fluency")
+
+    pronunciation_and_fluency_answer = st.radio(
+        "Pronunciation and Fluency",
+        pronunciation_and_fluency_options,
+        index=1,
+        key="pronunciation_and_fluency",
+        label_visibility="collapsed"
+    )
+
+
+# --------------------------------------------------
+# SCORE DICTIONARIES
+# --------------------------------------------------
+
+understanding_scores = {
+    "Understands simple questions with support": 1,
+    "Understands clear, familiar workplace questions": 2,
+    "Understands normal workplace communication and follow-ups": 3,
+    "Understands detailed and complex workplace communication": 4,
+    "Not Demonstrated": 0
 }
- 
-Details_Scores = {
-    "Верно отвечает на вопросы по тексту": 2,
-    "Отвечает неточно": 1,
-    "Не может ответить": 0,
+
+functional_communication_scores = {
+    "Communicates a few basic points": 1,
+    "Communicates the main message with some support": 2,
+    "Communicates all key points independently": 3,
+    "Communicates effectively and adapts to changes": 4,
+    "Not Demonstrated": 0
 }
- 
-Confidence_Scores = {
-    "Читает отлично или с небольшими ошибками": 2,
-    "Читает с ошибками": 1,
-    "Сильно теряется": 0
+
+interaction_clarification_scores = {
+    "Responds to simple questions using basic phrases": 1,
+    "Maintains a short exchange and asks for clarification": 2,
+    "Asks follow-up questions and resolves misunderstandings": 3,
+    "Clarifies ambiguity and develops the exchange effectively": 4,
+    "Not Demonstrated": 0
 }
- 
-#Scores2#
+
+grammar_and_structure_scores = {
+    "Uses basic sentence patterns with frequent errors": 1,
+    "Uses simple structures; the main message is clear": 2,
+    "Uses varied structures with reasonable control": 3,
+    "Uses complex structures clearly and accurately": 4,
+    "Not Demonstrated": 0
+}
+
+vocabulary_scores = {
+    "Uses a limited range of familiar words": 1,
+    "Uses familiar vocabulary for routine tasks": 2,
+    "Uses sufficient workplace vocabulary and can paraphrase": 3,
+    "Uses broad, precise vocabulary and adapts terminology": 4,
+    "Not Demonstrated": 0
+}
+
+pronunciation_and_fluency_scores = {
+    "Uses familiar phrases with frequent pauses": 1,
+    "Produces short, generally understandable speech": 2,
+    "Speaks clearly at a workable pace": 3,
+    "Speaks fluently and reformulates smoothly": 4,
+    "Not Demonstrated": 0
+}
+
+
+# --------------------------------------------------
+# TOTAL SCORE
+# --------------------------------------------------
+
 total_score = (
-    Understanding_Scores[understanding_answer] +
-    Details_Scores[details_answer] +
-    Confidence_Scores[confidence_answer]
+    understanding_scores[understanding_answer]
+    + functional_communication_scores[functional_communication_answer]
+    + interaction_clarification_scores[interaction_clarification_answer]
+    + grammar_and_structure_scores[grammar_and_structure_answer]
+    + vocabulary_scores[vocabulary_answer]
+    + pronunciation_and_fluency_scores[pronunciation_and_fluency_answer]
 )
- 
-def get_result_by_score(score):
-    if score < 3:
-        return "❌ Not OK"
-    elif score < 6:
-        return "⚠️ Partially OK"
-    else:
-        return "✅ Excellent"
-#Result#
-if st.button("Показать результат"):
-    st.success(get_result_by_score(total_score))
-    st.write("Сумма баллов:", total_score)
+
+
+# --------------------------------------------------
+# LEVEL CALCULATION
+# --------------------------------------------------
+
+if total_score <= 6:
+    level = "Below Level 1 or insufficient evidence"
+elif total_score <= 10:
+    level = "Level 1 — Basic English User"
+elif total_score <= 15:
+    level = "Level 2 — Supported English User"
+elif total_score <= 20:
+    level = "Level 3 — Working English User"
+else:
+    level = "Level 4 — Independent English User"
+
+
+# --------------------------------------------------
+# COMPACT RESULT
+# --------------------------------------------------
+
+st.divider()
+
+result_column_1, result_column_2 = st.columns([1, 3])
+
+with result_column_1:
+    st.metric(
+        label="Total Score",
+        value=f"{total_score}/24"
+    )
+
+with result_column_2:
+    st.metric(
+        label="Indicative Profile",
+        value=level
+    )
 
