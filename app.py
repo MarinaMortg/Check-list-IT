@@ -275,15 +275,15 @@ total_score = (
 # --------------------------------------------------
 
 if total_score <= 6:
-    level = "Below Level 1 or insufficient evidence"
+    level = "Not Demonstrated"
 elif total_score <= 10:
-    level = "Level 1 — Basic English User"
+    level = "Level 1 — Basic"
 elif total_score <= 15:
-    level = "Level 2 — Supported English User"
+    level = "Level 2 — Supported"
 elif total_score <= 20:
-    level = "Level 3 — Working English User"
+    level = "Level 3 — Working"
 else:
-    level = "Level 4 — Independent English User"
+    level = "Level 4 — Independent"
 
 
 # --------------------------------------------------
