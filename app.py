@@ -66,7 +66,7 @@ st.markdown(
 )
 
 
-st.title("English Language Assessment")
+st.title("General English Checklist")
 
 
 # --------------------------------------------------
