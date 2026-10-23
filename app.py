@@ -74,7 +74,7 @@ st.title("General English Checklist")
 # --------------------------------------------------
 
 understanding_options = [
-    "Not Demonstrated"
+    "Not Demonstrated",
     "Understands simple questions with support",
     "Understands clear, familiar workplace questions",
     "Understands normal workplace communication and follow-ups",
@@ -83,7 +83,7 @@ understanding_options = [
 ]
 
 functional_communication_options = [
-    "Not Demonstrated"
+    "Not Demonstrated",
     "Communicates a few basic points",
     "Communicates the main message with some support",
     "Communicates all key points independently",
@@ -92,7 +92,7 @@ functional_communication_options = [
 ]
 
 interaction_clarification_options = [
-    "Not Demonstrated"
+    "Not Demonstrated",
     "Responds to simple questions using basic phrases",
     "Maintains a short exchange and asks for clarification",
     "Asks follow-up questions and resolves misunderstandings",
@@ -101,7 +101,7 @@ interaction_clarification_options = [
 ]
 
 grammar_and_structure_options = [
-    "Not Demonstrated"
+    "Not Demonstrated",
     "Uses basic sentence patterns with frequent errors",
     "Uses simple structures; the main message is clear",
     "Uses varied structures with reasonable control",
@@ -110,7 +110,7 @@ grammar_and_structure_options = [
 ]
 
 vocabulary_options = [
-    "Not Demonstrated"
+    "Not Demonstrated",
     "Uses a limited range of familiar words",
     "Uses familiar vocabulary for routine tasks",
     "Uses sufficient workplace vocabulary and can paraphrase",
@@ -119,7 +119,7 @@ vocabulary_options = [
 ]
 
 pronunciation_and_fluency_options = [
-    "Not Demonstrated"
+    "Not Demonstrated",
     "Uses familiar phrases with frequent pauses",
     "Produces short, generally understandable speech",
     "Speaks clearly at a workable pace",
