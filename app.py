@@ -284,5 +284,21 @@ elif total_score <= 20:
     level = "Level 3 — Working"
 else:
     level = "Level 4 — Independent"
+##
 
+st.divider()
+
+result_column_1, result_column_2 = st.columns([1, 3])
+
+with result_column_1:
+    st.metric(
+        label="Total Score",
+        value=f"{total_score}/24"
+    )
+
+with result_column_2:
+    st.metric(
+        label="Indicative Profile",
+        value=level
+    )
 
