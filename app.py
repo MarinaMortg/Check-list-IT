@@ -312,7 +312,7 @@ result_column_1, result_column_2 = st.columns([1, 3])
 with result_column_1:
     st.metric(
         label="Total",
-        value=f"{total_score}/24"
+        value=f"{score}/24"
     )
 
 with result_column_2:
