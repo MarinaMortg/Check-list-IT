@@ -286,20 +286,20 @@ score = (
 # LEVEL CALCULATION
 # --------------------------------------------------
 
-if total_score <= 6:
+if score <= 6:
     level = "Not Demonstrated"
 
-elif total_score <= 10:
+elif score <= 10:
     level = "Level 1 — Basic"
 
-elif total_score <= 15:
+elif score <= 15:
     level = "Level 2 — Supported"
 
-elif total_score <= 20:
+elif score <= 20:
     level = "Level 3 — Working"
 
 else:
-    if 0 in total_scores:
+    if 0 in scores:
         level = "Level 3 — Working"
     else:
         level = "Level 4 — Independent"
