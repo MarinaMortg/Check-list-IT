@@ -103,8 +103,8 @@ interaction_clarification_options = [
 grammar_and_structure_options = [
     "Not Demonstrated",
     "Uses basic sentence patterns with frequent errors",
-    "Uses simple structures; the main message is clear",
-    "Uses varied structures with reasonable control",
+    "Uses simple structures; the main message is clear;errors are noticeable",
+    "Uses varied structures with reasonable control;rare errors",
     "Uses complex structures clearly and accurately",
     
 ]
@@ -243,8 +243,8 @@ interaction_clarification_scores = {
 grammar_and_structure_scores = {
     "Not Demonstrated": 0,
     "Uses basic sentence patterns with frequent errors": 1,
-    "Uses simple structures; the main message is clear": 2,
-    "Uses varied structures with reasonable control": 3,
+    "Uses simple structures; the main message is clear;errors are noticeable": 2,
+    "Uses varied structures with reasonable control;rare errors": 3,
     "Uses complex structures clearly and accurately": 4,
     
 }
