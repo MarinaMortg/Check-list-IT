@@ -288,18 +288,21 @@ total_score = (
 
 if total_score <= 6:
     level = "Not Demonstrated"
+
 elif total_score <= 10:
     level = "Level 1 — Basic"
+
 elif total_score <= 15:
     level = "Level 2 — Supported"
+
 elif total_score <= 20:
     level = "Level 3 — Working"
 
 else:
     if 0 in total_scores:
-    level = "Level 3 — Working"
+        level = "Level 3 — Working"
     else:
-    level = "Level 4 — Independent"
+        level = "Level 4 — Independent"
 ##
 
 st.divider()
