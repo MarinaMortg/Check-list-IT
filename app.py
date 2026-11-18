@@ -272,7 +272,7 @@ pronunciation_and_fluency_scores = {
 # TOTAL SCORE
 # --------------------------------------------------
 
-total_score = (
+score = (
     understanding_scores[understanding_answer]
     + functional_communication_scores[functional_communication_answer]
     + interaction_clarification_scores[interaction_clarification_answer]
