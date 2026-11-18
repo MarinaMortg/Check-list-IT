@@ -295,10 +295,10 @@ elif total_score <= 15:
 elif total_score <= 20:
     level = "Level 3 — Working"
 else:
-      if 0 in total_scores:
-        level = "Level 3 — Working"
+    if 0 in total_scores:
+    level = "Level 3 — Working"
     else:
-        level = "Level 4 — Independent"
+    level = "Level 4 — Independent"
 ##
 
 st.divider()
