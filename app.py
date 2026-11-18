@@ -299,7 +299,7 @@ elif score <= 20:
     level = "Level 3 — Working"
 
 else:
-    if score = 0:
+    if score == 0:
         level = "Level 3 — Working"
     else:
         level = "Level 4 — Independent"
