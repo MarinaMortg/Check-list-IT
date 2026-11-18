@@ -294,6 +294,7 @@ elif total_score <= 15:
     level = "Level 2 — Supported"
 elif total_score <= 20:
     level = "Level 3 — Working"
+
 else:
     if 0 in total_scores:
     level = "Level 3 — Working"
